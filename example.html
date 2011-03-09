@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Unless example</title>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script type="text/javascript" src="jquery.unless.js"></script>
+  <script type="text/javascript" charset="utf-8">
+    $.unless(
+      function () {
+        return 3 == 2;
+      }, 
+      function () {
+        setTimeout(function () {
+          $('body').text('Test 1 passes yo.');
+        },2000);
+      });
+    $.unless(
+      function () {
+        return 3 == 3;
+      }, 
+      function () {
+        setTimeout(function () {
+          $('body').text('Test 2 fails yo.');
+        },4000);
+      });      
+  </script>
+</head>
+<body>
+  'Dis is a test...
+</body>
+</html>
