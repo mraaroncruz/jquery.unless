@@ -1,5 +1,5 @@
-(function (context, $, undefined) {
+(function ($, undefined) {
     $.unless = function (unless, then) {
         if (!unless()) then();
     };
-}(window, jQuery));
+}(jQuery));
